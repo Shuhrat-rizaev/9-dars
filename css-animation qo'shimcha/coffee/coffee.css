@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(72, 237, 232);
+  height: 60vh;
+}
+.cup {
+  margin: auto;
+  width: 280px;
+  height: 300px;
+  background-color: #f9f9f9;
+  position: relative;
+
+  border-bottom-left-radius: 34%;
+  border-bottom-right-radius: 38%;
+  margin-top: 20%;
+}
+.handler {
+  width: 70px;
+  height: 70px;
+  border: 25px solid #f9f9f9;
+  position: absolute;
+  top: 26%;
+  right: -27%;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.top {
+  width: 100%;
+  height: 60px;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, #f9f9f9, #d9d9d9);
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+.circle {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: 50px;
+  background-image: linear-gradient(to left, #f9f9f9, #d9d9d9);
+  border-radius: 50%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.tea {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #432f21;
+  border-radius: 50%;
+}
+.vapour {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding: 0 20px;
+}
+.vapour span {
+  position: relative;
+  bottom: 50px;
+  display: block;
+  margin: 0 2px 50px;
+  min-width: 8px;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: animate 5s linear infinite;
+  opacity: 0;
+  filter: blur(8px);
+  animation-delay: calc(var(--i) * -0.5s);
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0) scaleX(1);
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-150px) scaleX(5);
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-300px) scaleX(10);
+  }
+}

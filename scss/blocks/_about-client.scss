@@ -1,0 +1,20 @@
+@use "./variables" as *;
+
+.clients {
+  background-color: #012f34;
+  position: relative;
+  h2 {
+    @include text-style(700, 48px, 48px, #fff);
+    text-align: center;
+    padding: 140px 0 64px;
+  }
+  .client-img {
+    @include flex;
+    padding-bottom: 140px;
+  }
+  .client-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

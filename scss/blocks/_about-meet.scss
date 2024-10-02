@@ -1,0 +1,94 @@
+@use "./variables" as *;
+.meet {
+  position: relative;
+}
+.meet__cards {
+  padding-bottom: 140px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 76px;
+}
+.meet__card {
+  position: relative;
+  max-width: 350px;
+  height: 254px;
+
+  background-color: #012f34;
+  img {
+    margin-top: 35px;
+    margin-bottom: 13px;
+    padding: 0 124px;
+  }
+  h5 {
+    @include text-style(700, 18px, 28px, #79c8c7);
+    text-align: center;
+  }
+  h6 {
+    @include text-style(700, 13px, 18px, #fff);
+    text-align: center;
+    padding-bottom: 56px;
+  }
+}
+.meet-card-m {
+  position: relative;
+  max-width: 350px;
+  padding: 35px 24px;
+  background-color: #002529;
+
+  h6 {
+    @include text-style(600, 15px, 25px, #fff);
+    max-width: 254px;
+    margin: 0 auto;
+  }
+  .meet__socials {
+    padding: 0 124px;
+    transform: translate(-11px, -40px);
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    img {
+      padding: 0;
+    }
+  }
+  .plus {
+    background-color: #79c8c7;
+    &:hover {
+      background-color: #f67e7e;
+    }
+  }
+}
+.plus {
+  position: absolute;
+  bottom: -10%;
+  left: 40%;
+  width: 56px;
+  height: 56px;
+  background-color: #f67e7e;
+  border-radius: 50%;
+  text-align: center;
+  transition: 0.5s;
+  &:hover {
+    cursor: pointer;
+    background-color: #79c8c7;
+  }
+  img {
+    margin: 0;
+    padding: 0;
+    transform: translate(0px, 21px);
+  }
+}
+
+.meet-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.meet-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

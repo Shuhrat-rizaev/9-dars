@@ -1,0 +1,126 @@
+@use "./variables";
+
+@media only screen and (min-width: 596px) and (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+  .header {
+    padding-top: 64px;
+    .hero {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      text-align: center;
+      margin-top: 112px;
+      h1 {
+        @include variables.text-style(700, 64px, 56px, #fff);
+        max-width: 380px;
+      }
+      .hero__content {
+        .hero__hr {
+          display: none;
+        }
+        p {
+          @include variables.text-style(600, 15px, 28px, #fff);
+          max-width: 457px;
+        }
+      }
+    }
+    .disk-left {
+      display: none;
+    }
+    .disk-buttom {
+      right: 50%;
+      transform: translateX(50%);
+    }
+    .disk__red {
+      width: 10%;
+    }
+  }
+  .build {
+    &__main {
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 0;
+    }
+    &__title {
+      margin-top: 100px;
+      margin-bottom: 64px;
+      align-self: center;
+      h2 {
+        @include variables.text-style(700, 32px, 32px, #fff);
+      }
+    }
+    &__img {
+      top: 0;
+    }
+  }
+  .delivering {
+    h2 {
+      @include variables.text-style(700, 32px, 32px, #fff);
+      max-width: 573px;
+      padding-top: 100px;
+      margin-bottom: 84px;
+    }
+    &__content {
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 100px;
+      p {
+        max-width: 573px;
+        margin: 0 auto;
+      }
+    }
+    &__text {
+      margin-bottom: 40px;
+    }
+  }
+  .ready {
+    h2 {
+      @include variables.text-style(700, 32px, 32px, #012f34);
+    }
+    &__main {
+      padding: 84px 40px;
+    }
+    &__img {
+      width: 17%;
+    }
+  }
+  footer {
+    .footer__main {
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-auto-rows: 1fr 1fr;
+      padding-top: 56px;
+    }
+    .footer__svg {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .footer__logo {
+      justify-content: space-between;
+      p {
+        text-align: end;
+        span {
+          position: relative;
+        }
+      }
+    }
+  }
+  .clients {
+    h2 {
+      @include variables.text-style(700, 32px, 32px, #fff);
+    }
+    .client-img {
+      img {
+        max-width: 103px;
+      }
+    }
+    .client-bg {
+      width: 30%;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@use "./variables" as *;
+
+.delivering {
+  background-color: #004047;
+  position: relative;
+
+  h2 {
+    @include text-style(700, 48px, 48px, #fff);
+    margin: 0 auto 92px;
+    padding-top: 140px;
+    max-width: 932px;
+    text-align: center;
+
+    span {
+      color: #79c8c7;
+    }
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+    text-align: center;
+    padding-bottom: 140px;
+    p {
+      @include text-style(600, 15px, 25px, #fff);
+      max-width: 350px;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 22;
+    }
+    h5 {
+      @include text-style(700, 18px, 28px, #79c8c7);
+      margin: 24px 0 2px;
+    }
+    h6 {
+      @include text-style(700, 13px, 18px, #fff);
+      font-style: italic;
+      margin-bottom: 32px;
+    }
+  }
+  &__text {
+    position: relative;
+  }
+  .quote {
+    position: absolute;
+    top: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .deliver__right {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .deliver__buttom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

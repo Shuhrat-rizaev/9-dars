@@ -1,0 +1,66 @@
+@use "./variables" as *;
+
+.header {
+  position: relative;
+  height: fit-content;
+  .hero {
+    position: relative;
+    padding-bottom: 120px;
+    align-items: center;
+    justify-content: unset;
+    h1 {
+      @include text-style(700, 64px, 100px, #fff);
+    }
+    h4 {
+      @include text-style(700, 32px, 48px, #f67e7e);
+      margin-top: 16px;
+      margin-bottom: 32px;
+    }
+    .hero__text {
+      @include flex;
+      justify-content: unset;
+      gap: 23px;
+    }
+    .left {
+      position: absolute;
+      top: 0;
+      left: -124px;
+    }
+  }
+  .contact-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 7%;
+  }
+}
+.hero__form {
+  form {
+    @include flex;
+    flex-direction: column;
+    gap: 20px;
+    input,
+    textarea {
+      width: 540px;
+      padding: 16px 14px;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #fff;
+      background-color: transparent;
+      color: #ffffff;
+    }
+    textarea {
+      padding-bottom: 58px;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: #ffffff60;
+    }
+  }
+  .form-btn {
+    transform: translateX(-209px);
+    background-color: #fff;
+    color: #004047;
+  }
+}

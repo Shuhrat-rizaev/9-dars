@@ -1,0 +1,83 @@
+@use "./variables";
+
+header {
+  padding-top: 73px;
+  height: 700px;
+  background-color: #014e56;
+  position: relative;
+  .navbar {
+    @include variables.flex;
+    .nav {
+      @include variables.flex;
+      gap: 60px;
+    }
+    ul {
+      @include variables.flex;
+      gap: 40px;
+      justify-content: flex-start;
+    }
+    a {
+      @include variables.text-style(600, 18px, 28px, #fff);
+
+      &:hover {
+        color: #f67e7e;
+      }
+    }
+  }
+  .disk-left {
+    position: absolute;
+    top: 35%;
+    left: 0;
+  }
+
+  .disk-buttom {
+    position: absolute;
+    bottom: 0;
+    right: 8%;
+  }
+  .hero {
+    position: relative;
+    margin-top: 129px;
+
+    @include variables.flex;
+    align-items: flex-end;
+    gap: 130px;
+    h1 {
+      max-width: 531px;
+      @include variables.text-style(700, 100px, 100px, #fff);
+      margin-left: 4%;
+
+      span {
+        color: #fb7e7e;
+      }
+    }
+
+    .hero__content {
+      position: relative;
+      .hero__hr {
+        width: 50px;
+        height: 4px;
+        border: none;
+        background-color: #79c8c7;
+        position: absolute;
+        top: -70px;
+        left: 0;
+      }
+    }
+    p {
+      @include variables.text-style(600, 18px, 28px, #fff);
+      max-width: 445px;
+    }
+    .disk-left {
+      position: absolute;
+      left: -13%;
+    }
+  }
+  .hamburber,
+  #hamburber-menu {
+    display: none;
+  }
+  .active {
+    color: #f67e7e !important;
+  }
+}

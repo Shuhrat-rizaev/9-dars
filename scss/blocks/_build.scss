@@ -1,0 +1,55 @@
+@use "./variables" as *;
+
+.build {
+  background-color: #012f34;
+  position: relative;
+
+  &__main {
+    padding: 198px 0 140px;
+    @include flex;
+    // gap: 125px;
+    // align-items: flex-start;
+  }
+  &__title {
+    position: relative;
+    align-self: baseline;
+  }
+  &__hr {
+    position: absolute;
+    top: -54px;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    border: none;
+    background-color: #f67e7e;
+  }
+  h2 {
+    @include text-style(700, 48px, 48px, #fff);
+    max-width: 445px;
+  }
+  &__content {
+    max-width: 540px;
+  }
+  &__text {
+    @include flex;
+    align-items: flex-start;
+    gap: 23px;
+    padding-bottom: 32px;
+    h4 {
+      @include text-style(700, 18px, 28px, #f67e7e);
+      padding-bottom: 16px;
+
+      p {
+        @include text-style(600, 15px, 25px, #fff);
+      }
+    }
+    img {
+      transform: translateY(-7px);
+    }
+  }
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

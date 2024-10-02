@@ -1,0 +1,25 @@
+@use "./variables" as *;
+
+header {
+  height: 517px;
+  .hero {
+    margin-top: 120px;
+    align-items: flex-end;
+    h1 {
+      @include text-style(700, 64px, 100px, #fff);
+      transform: translateY(-30px);
+    }
+    p {
+      @include text-style(600, 18px, 28px, #fff);
+      max-width: 668px;
+    }
+    .hero__content .hero__hr {
+      background-color: #f67e7e;
+    }
+  }
+  .disk__red {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
